@@ -75,7 +75,7 @@ ssize_t client_encode_segment(dns_packet_t* packet, size_t* packet_len, const un
     edns.opt.type = RR_OPT;
     edns.opt.class = CLASS_UNKNOWN;
     edns.opt.ttl = 0;
-    edns.opt.udp_payload = 1232;
+    edns.opt.udp_payload = 512;
 
     dns_query_t query = {0};
     query.id = rand() % UINT16_MAX;
