@@ -62,7 +62,7 @@ ssize_t server_encode(void* slot_p, void* callback_ctx, unsigned char** dest_buf
     edns.opt.type = RR_OPT;
     edns.opt.class = CLASS_UNKNOWN;
     edns.opt.ttl = 0;
-    edns.opt.udp_payload = 1232;
+    edns.opt.udp_payload = 512;
 
     dns_query_t response = {0};
     response.id = query->id;
