@@ -5,6 +5,11 @@ on:
     tags:
       - "v*.*.*"
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name for release (e.g., v1.0.0)'
+        required: true
+        default: ''
 
 env:
   BUILD_TYPE: Release
@@ -20,7 +25,7 @@ jobs:
       matrix:
         include:
           - arch: x86_64
-            runner: ubuntu-latest
+            runner: ubuntu-22.04
           - arch: arm64
             runner: ubuntu-24.04-arm
 
